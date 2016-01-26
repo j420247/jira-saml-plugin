@@ -27,16 +27,16 @@
   </web-resource>
 
   <web-item name="SAML 2.0 Configuration" i18n-name-key="saml2plugin.config" key="saml2plugin-config" section="top_system_section/mail_section" weight="150" application="jira">
-      <description key="saml2plugin.config">SAML 2.0 plugin Configuration</description>
-      <label key="saml2plugin.config">SAML 2.0 plugin Configuration</label>
-      <link linkId="saml2plugin.config.link">/secure/admin/saml2pluginjira.configure.jspa</link>
+     <description key="saml2plugin.config">SAML 2.0 plugin Configuration</description>
+     <label key="saml2plugin.config">SAML 2.0 plugin Configuration</label>
+     <link linkId="saml2plugin.config.link">/secure/admin/saml2pluginjira.configure.jspa</link>
   </web-item>
 
   <component key="samlConfig" class="com.bitium.jira.config.SAMLJiraConfig" />
 
-  <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties"/>
-  <component-import key="pluginSettingsFactory" interface="com.atlassian.sal.api.pluginsettings.PluginSettingsFactory"/>
-  <component-import name="LoginUriProvider " key="loginUriProvider " interface="com.atlassian.sal.api.auth.LoginUriProvider"/>
+  <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+  <component-import key="pluginSettingsFactory" interface="com.atlassian.sal.api.pluginsettings.PluginSettingsFactory" />
+  <component-import name="LoginUriProvider " key="loginUriProvider " interface="com.atlassian.sal.api.auth.LoginUriProvider" />
 
   <!-- Authentication servlet. Redirects a user to IDP and then logs him in, if authentication was successfull -->
   <servlet name="SAML 2 Login Servlet" i18n-name-key="saml-login-servlet.name" key="saml-login-servlet" class="com.bitium.jira.servlet.SsoLoginServlet">

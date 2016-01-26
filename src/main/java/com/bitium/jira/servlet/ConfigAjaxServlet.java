@@ -17,26 +17,26 @@ import com.bitium.jira.config.SAMLJiraConfig;
  *
  */
 public class ConfigAjaxServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	
-	private SAMLJiraConfig saml2Config;
-	
-	public void setSaml2Config(SAMLJiraConfig saml2Config) {
-		this.saml2Config = saml2Config;
-	}
-	
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		String parameter = request.getParameter("param");
-		if (parameter != null) {
-			if (parameter.equals("idpRequired")) {
-				response.getOutputStream().write(saml2Config.getIdpRequired().getBytes());
-			} else if (parameter.equals("logoutUrl")) {
-				response.getOutputStream().write(saml2Config.getLogoutUrl().getBytes());
-			}				
-		} 
-		
-	}
-	    
+    private static final long serialVersionUID = 1L;
+
+    private SAMLJiraConfig saml2Config;
+
+    public void setSaml2Config(SAMLJiraConfig saml2Config) {
+        this.saml2Config = saml2Config;
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String parameter = request.getParameter("param");
+        if (parameter != null) {
+            if ("idpRequired".equals(parameter)) {
+                response.getOutputStream().write(saml2Config.getIdpRequired().getBytes());
+            } else if ("logoutUrl".equals(parameter)) {
+                response.getOutputStream().write(saml2Config.getLogoutUrl().getBytes());
+            }
+        }
+
+    }
+
 }

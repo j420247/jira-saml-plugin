@@ -52,16 +52,20 @@
         <div class="field-label">
           <input type="checkbox" name="idpRequired" id="idpRequired" class="checkbox"
           #if ($idpRequired.equals("true"))
-            checked
+            checked 
           #end>$i18n.getText("saml2plugin.admin.field.idpRequired")</div>
-        <div class="field-desc" style="margin-left:20px;">$i18n.getText("saml2plugin.admin.field.idpRequired.desc")</div>
-        <div class="field-label">
-          <input type="checkbox" name="autoCreateUser" id="autoCreateUser" class="checkbox"
-          #if ($autoCreateUser.equals("true"))
-            checked
-          #end>$i18n.getText("saml2plugin.admin.field.autoCreateUser")</div>
-        <div class="field-desc" style="margin-left:20px;">$i18n.getText("saml2plugin.admin.field.autoCreateUser.desc")</div>
-        <div style="margin-top:10px"><input class="aui-button aui-button-primary" type="submit" value="$i18n.getText('save.name')"></div>
 
+        <div class="field-desc" style="margin-left:20px;">$i18n.getText("saml2plugin.admin.field.idpRequired.desc")</div>
+
+        <div class="field-label">
+            <input type="checkbox" name="autoCreateUser" id="autoCreateUser" class="checkbox"
+                #if ($autoCreateUser.equals("true"))
+                   checked
+                #end>$i18n.getText("saml2plugin.admin.field.autoCreateUser")</div>
+        <div class="field-desc" style="margin-left:20px;">$i18n.getText("saml2plugin.admin.field.autoCreateUser.desc")</div>
+
+        <div style="margin-top:10px"><input class="aui-button aui-button-primary" type="submit" value="$i18n.getText('save.name')"></div>
+        
     </form>
-</body></html>
+</body>
+</html>
